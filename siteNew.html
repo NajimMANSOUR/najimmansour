@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pr. Najim MANSOUR - Site Personnel</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f4f6fc;
+  }
+
+  /* Hero section avec image dynamique */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), 
+                url('fste.png') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.3);
+    pointer-events: none;
+  }
+  .hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.5s;
+    z-index: 1;
+  }
+  .hero img:hover { transform: scale(1.05); }
+  .hero h1, .hero h2, .hero p { position: relative; z-index: 1; }
+  .hero h1 { font-size: 2.5em; margin: 0; animation: fadeIn 1.5s ease forwards; }
+  .hero h2 { font-size: 1.2em; margin: 10px 0 20px; font-weight: normal; animation: fadeIn 2s ease forwards; }
+  .hero p { max-width: 700px; font-size: 1.1em; line-height: 1.6; animation: fadeIn 2.5s ease forwards; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  main {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  h2.section-title {
+    font-size: 2em;
+    color: #4b0082;
+    border-left: 6px solid #9370db;
+    padding-left: 12px;
+    margin-bottom: 25px;
+  }
+/*        ---------     */
+/*----------------------------*/
+  /* Footer menu sticky */
+  footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    z-index: 999;
+  }
+  footer a {
+    text-decoration: none;
+    color: #6a5acd;
+    background: #f4f6fc;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  footer a:hover { background: #6a5acd; color: white; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 2em; }
+    .hero h2 { font-size: 1em; }
+  }
+</style>
+</head>
+<body>
+<!------------------------>
+<!---------------------------->
+<!-- Hero Section -->
+<section class="hero">
+  <img src="najim.png" alt="Pr. Najim MANSOUR">
+  <h1>Pr. Najim MANSOUR</h1>
+  <h2>Maître de conférence habilité</h2>
+  <p>
+    Équipe de Physique Moderne, Rayonnement et Applications (PMRA) <br>
+    Laboratoire des Systèmes Intelligents Matériaux et Energie Durables (SIMED) <br>
+    Département des sciences de l’ingénieur, Faculté des Sciences et Technique-Errachidia <br>
+    Université Moulay Ismail, Maroc
+  </p>
+  <p>
+    Bienvenue sur mon site personnel, où vous trouverez mes supports pédagogiques, mes travaux de recherche et mes activités scientifiques.
+  </p>
+<!--------------------------->
+<!-- Menu rapide après la présentation -->
+<!-- Menu rapide après la présentation -->
+<div style="margin-top:30px; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; z-index:1; position:relative;">
+  <a href="#domaines-recherche" style="text-decoration:none; background:#9370db; color:white; padding:10px 20px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Domaines de recherche</a>
+  <a href="#documents-pedagogiques" style="text-decoration:none; background:#6a5acd; color:white; padding:10px 20px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Documents pédagogiques</a>
+  <a href="#encadrement-licence" style="text-decoration:none; background:#8a2be2; color:white; padding:10px 20px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Encadrement Licence</a>
+  <a href="#encadrement-master" style="text-decoration:none; background:#7b68ee; color:white; padding:10px 20px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Encadrement Master</a>
+  <a href="#encadrement-doctorat" style="text-decoration:none; background:#6a5acd; color:white; padding:10px 20px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Encadrement Doctorat</a>
+  <a href="#activites-scientifiques" style="text-decoration:none; background:#483d8b; color:white; padding:10px 20px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Activités scientifiques</a>
+</div>
+<!-------------------------------->
+</section>
+
+<main>
+  <!-- Ici vous pouvez insérer toutes vos sections HTML existantes -->
+<!-----------------------------------profile de recherche--------------------------------->
+<section id="profils-recherche" style="padding: 40px; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 900px; margin: auto;">
+
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #27ae60; padding-left: 12px; margin-bottom: 25px;">
+      Mes Profils de Recherche
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 30px;">
+      Vous pouvez consulter mes publications, citations et collaborations scientifiques 
+      à travers mes profils de recherche sur différentes plateformes internationales.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+
+      <!-- Google Scholar -->
+      <div style="background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.1em;">📖 Google Scholar</h3>
+        <a href="https://scholar.google.com/" target="_blank" 
+           style="display: inline-block; margin-top: 10px; padding: 8px 16px; background: #4285F4; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          Voir Profil
+        </a>
+      </div>
+
+      <!-- Scopus -->
+      <div style="background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.1em;">🔎 Scopus</h3>
+        <a href="https://www.scopus.com/" target="_blank" 
+           style="display: inline-block; margin-top: 10px; padding: 8px 16px; background: #FF6F00; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          Voir Profil
+        </a>
+      </div>
+
+      <!-- ORCID -->
+      <div style="background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.1em;">🧬 ORCID</h3>
+        <a href="https://orcid.org/" target="_blank" 
+           style="display: inline-block; margin-top: 10px; padding: 8px 16px; background: #A6CE39; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          Voir Profil
+        </a>
+      </div>
+
+      <!-- ResearchGate -->
+      <div style="background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.1em;">🌐 ResearchGate</h3>
+        <a href="https://www.researchgate.net/" target="_blank" 
+           style="display: inline-block; margin-top: 10px; padding: 8px 16px; background: #00CCBB; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          Voir Profil
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--------------------------------------------------------------->
+<!------------------------------Expériences professionnelles & académiques--------------------------------------->
+<section id="experiences" style="padding: 50px; background-color: #fefefe; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: auto;">
+
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #16a085; padding-left: 12px; margin-bottom: 25px;">
+      💼 Expériences professionnelles & académiques
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 35px;">
+      Mon parcours académique et professionnel comprend des postes d’enseignement, de recherche, 
+      ainsi que des missions dans des institutions nationales et internationales. Ces expériences 
+      témoignent de ma contribution au développement scientifique et pédagogique.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+
+      <!-- Carte 1 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Enseignement</h3>
+        <ul style="color: #555; font-size: 0.95em; padding-left: 18px; line-height: 1.6;">
+          <li>Professeur Assistant — Université Mohammed V, Rabat, 2018-2022</li>
+          <li>Chargé de cours — Université Cadi Ayyad, Marrakech, 2015-2018</li>
+        </ul>
+      </div>
+
+      <!-- Carte 2 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Recherche</h3>
+        <ul style="color: #555; font-size: 0.95em; padding-left: 18px; line-height: 1.6;">
+          <li>Chercheur postdoctoral — Université de Lyon, France, 2016-2018</li>
+          <li>Membre d’équipe de recherche — Laboratoire de Physique Appliquée, 2012-2016</li>
+        </ul>
+      </div>
+
+      <!-- Carte 3 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Missions & collaborations</h3>
+        <ul style="color: #555; font-size: 0.95em; padding-left: 18px; line-height: 1.6;">
+          <li>Consultant scientifique — Projet de simulation énergétique, 2020</li>
+          <li>Visiteur invité — Université de Bruxelles, Belgique, 2017</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!------------------------------------------------------------------->
+
+<!-- Mes documents pédagogiques -->
+<section id="documents-pedagogiques" style="padding: 40px; background-color: #fefefe; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: auto;">
+    
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #2980b9; padding-left: 12px; margin-bottom: 25px;">
+      Mes documents pédagogiques
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 30px;">
+      Dans le cadre de mes activités d’enseignement, j’ai élaboré et mis à disposition différents supports pédagogiques 
+      destinés aux étudiants : cours magistraux, travaux dirigés (TD), travaux pratiques (TP) ainsi que d’autres documents complémentaires. 
+      Ces ressources sont conçues pour faciliter l’apprentissage, renforcer la compréhension et encourager l’autonomie des étudiants.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+
+      <!-- Cours -->
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">📘 Cours</h3>
+        <p style="color: #666; font-size: 0.95em;">Supports de cours détaillés et illustrés.</p>
+        <ul style="margin-top: 10px; padding-left: 20px; color: #555; font-size: 0.95em;">
+          <li>
+            <b>Méthodes Numériques</b> — 
+            <a href="documents/cours-methodes-numeriques.pdf" target="_blank" 
+               style="color: #2980b9; text-decoration: none; font-weight: bold;">
+               Télécharger
+            </a>
+          </li>
+          <li>
+            <b>Programmation Python</b> — 
+            <a href="documents/cours-python.pdf" target="_blank" 
+               style="color: #2980b9; text-decoration: none; font-weight: bold;">
+               Télécharger
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- TD -->
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">✍️ Travaux dirigés (TD)</h3>
+        <p style="color: #666; font-size: 0.95em;">Exercices progressifs avec corrections.</p>
+        <ul style="margin-top: 10px; padding-left: 20px; color: #555; font-size: 0.95em;">
+          <li>
+            <b>TD 1 - Résolution numérique</b> — 
+            <a href="documents/td1.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold;">Télécharger</a>
+          </li>
+          <li>
+            <b>TD 2 - Simulation Python</b> — 
+            <a href="documents/td2.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold;">Télécharger</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- TP -->
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">🔬 Travaux pratiques (TP)</h3>
+        <p style="color: #666; font-size: 0.95em;">Guides et protocoles expérimentaux.</p>
+        <ul style="margin-top: 10px; padding-left: 20px; color: #555; font-size: 0.95em;">
+          <li>
+            <b>TP 1 - Méthodes numériques en Python</b> — 
+            <a href="documents/tp1.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold;">Télécharger</a>
+          </li>
+          <li>
+            <b>TP 2 - Simulation Monte Carlo</b> — 
+            <a href="documents/tp2.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold;">Télécharger</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Autres ressources -->
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">📂 Autres ressources</h3>
+        <p style="color: #666; font-size: 0.95em;">Supports complémentaires et bibliographies.</p>
+        <ul style="margin-top: 10px; padding-left: 20px; color: #555; font-size: 0.95em;">
+          <li>
+            <b>Fiche de révision - Algèbre</b> — 
+            <a href="documents/fiche-algebre.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold;">Télécharger</a>
+          </li>
+          <li>
+            <b>Bibliographie thématique</b> — 
+            <a href="documents/bibliographie.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold;">Télécharger</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- --------------------------------------------------------------- -->
+<!------------------BOOKS--------------------------->
+<section id="livres-collaboration" style="padding: 50px; background-color: #fefefe; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: auto;">
+
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #8e44ad; padding-left: 12px; margin-bottom: 25px;">
+      📚 Livres en collaboration
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 35px;">
+      Dans le cadre de mes activités de recherche et d’enseignement, j’ai contribué à la rédaction 
+      et à la publication de plusieurs ouvrages collectifs en collaboration avec d’autres chercheurs.  
+      Ces travaux reflètent des approches interdisciplinaires et enrichissent la diffusion scientifique.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+
+      <!-- Livre 1 -->
+       
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <img src="book1.png" alt="Couverture du livre 1" style="max-width: 100%; border-radius: 8px;">
+        <h3 style="color: #34495e; margin-bottom: 8px; font-size: 1.2em;">Méthodes Numériques pour la Physique</h3>
+        <p style="color: #888; font-size: 0.95em; margin-bottom: 12px;">Publié en 2022 — Éditions Dunod</p>
+        <a href="https://exemple.com/livre1" target="_blank" 
+           style="display: inline-block; padding: 8px 16px; background: #8e44ad; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          📖 Consulter
+        </a>
+      </div>
+
+      <!-- Livre 2 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <img src="book2.png" alt="Couverture du livre 1" style="max-width: 100%; border-radius: 8px;">
+       
+ <h3 style="color: #34495e; margin-bottom: 8px; font-size: 1.2em;">Applications de Python en Sciences</h3>
+        <p style="color: #888; font-size: 0.95em; margin-bottom: 12px;">Publié en 2021 — Springer</p>
+        <a href="https://exemple.com/livre2" target="_blank" 
+           style="display: inline-block; padding: 8px 16px; background: #8e44ad; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          📖 Consulter
+        </a>
+      </div>
+
+      <!-- Livre 3 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <img src="booknm.png" alt="Couverture du livre 1" style="max-width: 100%; border-radius: 8px;">
+       
+ <h3 style="color: #34495e; margin-bottom: 8px; font-size: 1.2em;">Intelligence Artificielle et Simulation</h3>
+        <p style="color: #888; font-size: 0.95em; margin-bottom: 12px;">Publié en 2020 — Elsevier</p>
+        <a href="https://exemple.com/livre3" target="_blank" 
+           style="display: inline-block; padding: 8px 16px; background: #8e44ad; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          📖 Consulter
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!------------------------------------------------------------>
+<section id="domaines-recherche" style="padding: 40px; background-color: #f9f9fb; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: auto;">
+    
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #16a085; padding-left: 12px; margin-bottom: 25px;">
+      Domaines de recherche
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 30px;">
+      Mes travaux de recherche s’articulent autour de plusieurs thématiques 
+      interdisciplinaires, allant de la modélisation numérique à l’intelligence artificielle appliquée, 
+      avec des applications concrètes dans la physique, l’énergie et la santé.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">⚛️ Modélisation & Simulation numérique</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          Développement de modèles mathématiques et numériques pour l’étude 
+          des systèmes physiques complexes.
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">🔋 Énergies renouvelables</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          Recherche sur les cellules solaires, matériaux innovants et 
+          optimisation des dispositifs énergétiques.
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">🧠 Intelligence artificielle & Santé</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          Application de l’IA et du machine learning pour l’analyse 
+          de données médicales et le diagnostic assisté.
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">💻 Calcul scientifique & HPC</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          Utilisation des méthodes de calcul haute performance pour 
+          résoudre des problèmes complexes en physique et ingénierie.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!----------------------------------------Publications scientifiques----------------------------------------------------->
+<section id="publications" style="padding: 50px; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: auto;">
+
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #2980b9; padding-left: 12px; margin-bottom: 25px;">
+      📄 Publications scientifiques
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 35px;">
+      Vous trouverez ici la liste de mes publications scientifiques, incluant des articles dans des revues indexées, 
+      des chapitres de livres, et des communications à des conférences internationales.  
+      Ces travaux reflètent mes contributions dans le domaine de la recherche scientifique et académique.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+
+      <!-- Article 1 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 8px; font-size: 1.1em;">Méthodes numériques pour la physique appliquée</h3>
+        <p style="color: #888; font-size: 0.95em; margin-bottom: 12px;">Journal of Computational Physics, 2023</p>
+        <a href="https://example.com/article1" target="_blank" 
+           style="display: inline-block; padding: 8px 16px; background: #2980b9; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          📖 Consulter
+        </a>
+      </div>
+
+      <!-- Article 2 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 8px; font-size: 1.1em;">Simulation optique de matériaux multicouches</h3>
+        <p style="color: #888; font-size: 0.95em; margin-bottom: 12px;">Applied Optics, 2022</p>
+        <a href="https://example.com/article2" target="_blank" 
+           style="display: inline-block; padding: 8px 16px; background: #2980b9; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          📖 Consulter
+        </a>
+      </div>
+
+      <!-- Article 3 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 8px; font-size: 1.1em;">Applications de Python en sciences et ingénierie</h3>
+        <p style="color: #888; font-size: 0.95em; margin-bottom: 12px;">Computational Science Journal, 2021</p>
+        <a href="https://example.com/article3" target="_blank" 
+           style="display: inline-block; padding: 8px 16px; background: #2980b9; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+          📖 Consulter
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!---------------------------------------------------------------------------------------------->
+<section id="encadrement-licence" style="padding: 40px; background-color: #f9f9fb; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 900px; margin: auto;">
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #3498db; padding-left: 12px; margin-bottom: 25px;">
+      Encadrement de Licence
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6;">
+      J’ai eu l’opportunité d’encadrer plusieurs étudiants dans le cadre de leurs projets de fin d’études en licence.
+      Ces projets, réalisés dans des thématiques variées, ont permis aux étudiants de développer leurs compétences
+      en recherche, en programmation et en présentation scientifique.
+    </p>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">2023 – Projet Licence</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <strong>Thème :</strong> Simulation numérique d’un système physique.<br>
+          <strong>Étudiant :</strong> A. Benali<br>
+          <strong>Résultat :</strong> Soutenance avec mention Très Bien.
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">2022 – Projet Licence</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <strong>Thème :</strong> Développement d’une application Python pour l’analyse de données.<br>
+          <strong>Étudiante :</strong> S. El Amrani<br>
+          <strong>Résultat :</strong> Publication d’un rapport scientifique.
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">2021 – Projet Licence</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <strong>Thème :</strong> Modélisation numérique en physique appliquée.<br>
+          <strong>Étudiant :</strong> M. Zahid<br>
+          <strong>Résultat :</strong> Développement d’un code en C++.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="encadrement-master" style="padding: 40px; background-color: #f4f6f9; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 900px; margin: auto;">
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #27ae60; padding-left: 12px; margin-bottom: 25px;">
+      Encadrement de Master
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6;">
+      Dans le cadre du Master, j’ai accompagné plusieurs étudiants dans leurs travaux de recherche.
+      Ces projets ont porté sur des thématiques avancées en modélisation, simulation et applications
+      interdisciplinaires, contribuant à leur formation scientifique et professionnelle.
+    </p>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">2024 – Mémoire Master</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <strong>Thème :</strong> Optimisation numérique pour les systèmes complexes.<br>
+          <strong>Étudiant :</strong> H. El Idrissi<br>
+          <strong>Résultat :</strong> Article soumis à une revue internationale.
+        </p>
+      </div>
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">2023 – Mémoire Master</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <strong>Thème :</strong> Simulation Monte Carlo appliquée à la physique médicale.<br>
+          <strong>Étudiante :</strong> L. Amine<br>
+          <strong>Résultat :</strong> Présentation à une conférence nationale.
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">2022 – Mémoire Master</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <strong>Thème :</strong> Développement d’algorithmes pour la résolution d’équations différentielles.<br>
+          <strong>Étudiant :</strong> K. Nouri<br>
+          <strong>Résultat :</strong> Mention Très Bien et poursuite en doctorat.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="encadrement-doctorat" style="padding: 40px; background-color:  #f4f6f9; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 900px; margin: auto;">
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #8e44ad; padding-left: 12px; margin-bottom: 25px;">
+      Encadrement de Doctorat
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6;">
+      J’ai encadré plusieurs doctorants dans le cadre de leurs thèses de recherche. 
+      Ces travaux s’inscrivent dans des thématiques innovantes et ont abouti à des contributions 
+      scientifiques reconnues sous forme de publications et de communications internationales.
+    </p>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">2025 – Thèse Doctorat</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <strong>Thème :</strong> Modélisation multi-physique des cellules solaires à couches minces.<br>
+          <strong>Doctorant :</strong> A. Cherkaoui<br>
+          <strong>Résultat :</strong> Article publié dans *Solar Energy Materials & Solar Cells*.
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">2024 – Thèse Doctorat</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <strong>Thème :</strong> Intelligence artificielle pour la prédiction des maladies neurodégénératives.<br>
+          <strong>Doctorante :</strong> S. El Khattabi<br>
+          <strong>Résultat :</strong> Communication internationale (IEEE Conference).
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">2023 – Thèse Doctorat</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <strong>Thème :</strong> Simulation Monte Carlo pour le diagnostic en imagerie médicale.<br>
+          <strong>Doctorant :</strong> M. Idrissi<br>
+          <strong>Résultat :</strong> Deux articles publiés dans des revues indexées Scopus.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--------------------------------------------------------->
+<section id="jurys" style="padding: 50px; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: auto;">
+
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #2980b9; padding-left: 12px; margin-bottom: 25px;">
+      🎓 Participation à des jurys de thèse / HDR
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 35px;">
+      J’ai eu l’opportunité de participer à l’évaluation et à la soutenance de thèses et d’HDR 
+      (Habilitation à Diriger des Recherches), en tant que membre de jurys nationaux et internationaux. 
+      Ces missions témoignent de mon engagement dans l’encadrement scientifique et la validation académique.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+
+      <!-- Carte 1 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Thèse</h3>
+        <ul style="color: #555; font-size: 0.95em; padding-left: 18px; line-height: 1.6;">
+          <li><b>Ahmed Ben Ali</b> — Modélisation numérique en physique, Université de Rabat, 2023</li>
+          <li><b>Fatima Zahra</b> — Simulation optique de matériaux, Université de Casablanca, 2022</li>
+        </ul>
+      </div>
+
+      <!-- Carte 2 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">HDR</h3>
+        <ul style="color: #555; font-size: 0.95em; padding-left: 18px; line-height: 1.6;">
+          <li><b>Dr. Khalid Mansouri</b> — Habilitation en sciences de l’ingénieur, Université de Lyon, 2021</li>
+          <li><b>Dr. Leila Benkiran</b> — Habilitation en énergie renouvelable, Université de Paris, 2020</li>
+        </ul>
+      </div>
+
+      <!-- Carte 3 (optionnelle) -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Autres jurys</h3>
+        <ul style="color: #555; font-size: 0.95em; padding-left: 18px; line-height: 1.6;">
+          <li>Membre de jury de thèse collaborative internationale, Université de Bruxelles, 2019</li>
+          <li>Évaluation de thèse doctorale en physique appliquée, Université de Tunis, 2018</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!------------------------------------------------------------------>
+      <section id="activites-scientifiques" style="padding: 40px; background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: auto;">
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #e67e22; padding-left: 12px; margin-bottom: 25px;">
+      Mes activités scientifiques
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6;">
+      Mes activités scientifiques englobent à la fois la participation et l’organisation de conférences et congrès,
+  la mise en place et l’animation de formations spécialisées, ainsi que la contribution active à divers séminaires 
+  et workshops thématiques. Ces engagements traduisent mon investissement constant dans la diffusion du savoir, 
+  le partage d’expertise et le renforcement des échanges au sein de la communauté scientifique, 
+  aux échelles nationale et internationale.
+    </p>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Conférences</h3>
+        <ul style="color: #666; font-size: 0.95em; line-height: 1.6; margin: 0; padding-left: 18px;">
+          <li>Intervenant – <em>International Conference on Numerical Simulation</em>, 2024</li>
+          <li>Communication orale – <em>IEEE Conference on Biomedical Engineering</em>, 2023</li>
+          <li>Poster – <em>Journées de Physique Numérique</em>, 2022</li>
+        </ul>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Formations</h3>
+        <ul style="color: #666; font-size: 0.95em; line-height: 1.6; margin: 0; padding-left: 18px;">
+          <li>Organisation d’une école d’été en simulation numérique, 2023</li>
+          <li>Formation continue en programmation Python scientifique, 2022</li>
+          <li>Encadrement d’ateliers de recherche pour étudiants de Master, 2021</li>
+        </ul>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Séminaires & Workshops</h3>
+        <ul style="color: #666; font-size: 0.95em; line-height: 1.6; margin: 0; padding-left: 18px;">
+          <li>Invité – Séminaire sur les énergies renouvelables, 2024</li>
+          <li>Workshop – Applications de la simulation Monte Carlo, 2023</li>
+          <li>Conférence invitée – Journées Doctorales en Physique, 2022</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--------------------Activités éditoriales et reviewing------------------>
+<section id="activites-editoriales" style="padding: 50px; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: auto;">
+
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #e67e22; padding-left: 12px; margin-bottom: 25px;">
+      📝 Activités éditoriales et reviewing
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 35px;">
+      Mon engagement dans la communauté scientifique se traduit également par des activités éditoriales 
+      et de relecture. Je contribue à l’évaluation d’articles pour plusieurs revues internationales 
+      et participe à des comités éditoriaux afin de garantir la qualité et la diffusion des travaux scientifiques.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+
+      <!-- Carte 1 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Membre de comités éditoriaux</h3>
+        <ul style="color: #555; font-size: 0.95em; padding-left: 18px; line-height: 1.6;">
+          <li><b>Journal of Computational Physics</b> — Depuis 2021</li>
+          <li><b>International Journal of Applied Mathematics</b> — Depuis 2019</li>
+        </ul>
+      </div>
+
+      <!-- Carte 2 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Relecteur scientifique</h3>
+        <ul style="color: #555; font-size: 0.95em; padding-left: 18px; line-height: 1.6;">
+          <li><b>Elsevier</b> — Applied Energy, Energy Conversion & Management</li>
+          <li><b>Springer</b> — Neural Computing and Applications</li>
+          <li><b>IEEE</b> — Transactions on Computational Intelligence</li>
+        </ul>
+      </div>
+
+      <!-- Carte 3 -->
+      <div style="background: white; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color: #34495e; margin-bottom: 10px; font-size: 1.2em;">Organisation éditoriale</h3>
+        <ul style="color: #555; font-size: 0.95em; padding-left: 18px; line-height: 1.6;">
+          <li><b>Numéro spécial</b> — "Simulation numérique et intelligence artificielle", 2023</li>
+          <li><b>Éditeur associé</b> — Conférence internationale sur la modélisation scientifique, 2022</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--------------------------------------------->
+       <section id="contact" style="padding: 40px; background-color: #f4f6f9; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 800px; margin: auto; text-align: center;">
+    
+    <h2 style="font-size: 2em; color: #2c3e50; border-left: 6px solid #c0392b; padding-left: 12px; display: inline-block; margin-bottom: 25px;">
+      Contact
+    </h2>
+
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 30px;">
+      N’hésitez pas à me contacter pour toute collaboration scientifique, encadrement ou participation 
+      à des projets de recherche. Je suis disponible par email et via mes profils professionnels.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left;">
+      
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px;">📧 Email</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          <a href="mailto:votre.email@exemple.com" style="color:#2980b9; text-decoration:none;">n.mansour@umi.ac.ma</a>
+        </p>
+      </div>
+
+     
+
+      <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+        <h3 style="color: #34495e; margin-bottom: 10px;">📍 Adresse</h3>
+        <p style="color: #666; font-size: 0.95em;">
+          Faculté des Sciences,<br>
+          Université de Votre Ville,<br>
+          Maroc
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Exemple: <section id="domaines-recherche">...</section> -->
+</main>
+
+<!-- Footer menu -->
+<!-------<footer>
+  <a href="#domaines-recherche">Domaines</a>
+  <a href="#documents-pedagogiques">Cours & TD</a>
+  <a href="#encadrement-licence">Licence</a>
+  <a href="#encadrement-master">Master</a>
+  <a href="#encadrement-doctorat">Doctorat</a>
+  <a href="#activites-scientifiques">Activités</a>
+  <a href="#profils-recherche">Profils</a>
+  <a href="#livres-collaboration">Livres</a>
+  <a href="#publications">Publications</a>
+  <a href="#jurys">Jurys</a>
+  <a href="#experiences">Expériences</a>
+  <a href="#activites-editoriales">Éditorial</a>
+  <a href="#contact">Contact</a>
+</footer>
+  <footer>
+        &copy; 2025 Pr. Najim MANSOUR - Université Moulay Ismail Faculté des Sciences et Techniques Errachidia Maroc
+    </footer>--------->
+
+<!-- Footer navigation -->
+<footer style="width:100%; background-color:#fff; box-shadow:0 -2px 8px rgba(0,0,0,0.1); display:flex; flex-wrap:wrap; justify-content:center; gap:10px; padding:10px 0;">
+  <a href="#domaines-recherche" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Domaines</a>
+  <a href="#documents-pedagogiques" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Cours & TD</a>
+  <a href="#encadrement-licence" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Licence</a>
+  <a href="#encadrement-master" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Master</a>
+  <a href="#encadrement-doctorat" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Doctorat</a>
+  <a href="#activites-scientifiques" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Activités</a>
+  <a href="#profils-recherche" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Profils</a>
+  <a href="#livres-collaboration" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Livres</a>
+  <a href="#publications" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Publications</a>
+  <a href="#jurys" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Jurys</a>
+  <a href="#experiences" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Expériences</a>
+  <a href="#activites-editoriales" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Éditorial</a>
+  <a href="#contact" style="text-decoration:none; color:#6a5acd; background:#f4f6fc; padding:8px 15px; border-radius:25px; font-weight:bold; transition:all 0.3s;">Contact</a>
+</footer>
+
+<!-- Footer copyright / mentions légales -->
+<footer style="width:100%; background-color:#6a5acd; color:white; text-align:center; padding:12px 0; font-size:0.95em; margin-top:10px;">
+  &copy; 2025 Pr. Najim MANSOUR - Université Moulay Ismail, Faculté des Sciences et Techniques, Errachidia, Maroc
+</footer>
+
+</body>
+</html>
