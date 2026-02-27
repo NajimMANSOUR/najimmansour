@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  /*dyn book */
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pr. Najim MANSOUR - Site Personnel</title>
 <style>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: { slidesPerView: 2 },
+    480: { slidesPerView: 1 }
+  }
+});
+</script>
   body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -99,6 +117,29 @@
     .hero h1 { font-size: 2em; }
     .hero h2 { font-size: 1em; }
   }
+  .books-section {
+  padding: 40px;
+}
+
+.book-card {
+  background: #f5f5f5;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.book-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.btn {
+  background: purple;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
 </style>
 </head>
 <body>
@@ -330,7 +371,42 @@
 </section>
 
 
-<!-- --------------------------------------------------------------- -->
+<!-- --------------------BOOk Dynamics------------------------------------------- -->
+  <section class="books-section">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide book-card">
+        <img src="book1.jpg" />
+        <h3>Méthodes Numériques pour la Physique</h3>
+        <p>Publié en 2022 — Dunod</p>
+        <a href="#" class="btn">Consulter</a>
+      </div>
+
+      <div class="swiper-slide book-card">
+        <img src="book2.jpg" />
+        <h3>Applications de Python en Sciences</h3>
+        <p>Publié en 2021 — Springer</p>
+        <a href="#" class="btn">Consulter</a>
+      </div>
+
+      <div class="swiper-slide book-card">
+        <img src="book3.jpg" />
+        <h3>Intelligence Artificielle et Simulation</h3>
+        <p>Publié en 2020 — Elsevier</p>
+        <a href="#" class="btn">Consulter</a>
+      </div>
+
+    </div>
+
+    <!-- Flèches -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+  </div>
+</section>
+<!------------------BOOKS--------------------------->
+  <!-- --------------------------------------------------------------- -->
 <!------------------BOOKS--------------------------->
 <section id="livres-collaboration" style="padding: 50px; background-color: #fefefe; font-family: 'Segoe UI', sans-serif;">
   <div style="max-width: 1000px; margin: auto;">
