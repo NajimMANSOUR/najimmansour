@@ -1,28 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  /*dyn book */
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pr. Najim MANSOUR - Site Personnel</title>
 <style>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-<script>
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: { slidesPerView: 2 },
-    480: { slidesPerView: 1 }
-  }
-});
-</script>
   body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -117,32 +99,78 @@ var swiper = new Swiper(".mySwiper", {
     .hero h1 { font-size: 2em; }
     .hero h2 { font-size: 1em; }
   }
-  .books-section {
-  padding: 40px;
+ .books-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 40px 0;
 }
 
-.book-card {
-  background: #f5f5f5;
-  border-radius: 15px;
+.books {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 85%;
+  padding: 10px;
+}
+
+.books::-webkit-scrollbar {
+  display: none;
+}
+
+.book {
+  min-width: 260px;
+  background: #f8f8f8;
   padding: 20px;
+  border-radius: 15px;
   text-align: center;
+  flex-shrink: 0;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.book-card img {
+.book img {
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.btn {
-  background: purple;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
+/* ✨ Effet Zoom */
+.book:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.arrow {
+  font-size: 35px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
 }
 </style>
 </head>
-<body>
+  <script>
+function scrollLeft() {
+  document.getElementById("books").scrollBy({
+    left: -320,
+    behavior: "smooth"
+  });
+}
+
+function scrollRight() {
+  document.getElementById("books").scrollBy({
+    left: 320,
+    behavior: "smooth"
+  });
+}
+</script>
+</body>
 <!------------------------>
 <!---------------------------->
 <!-- Hero Section -->
@@ -369,41 +397,35 @@ var swiper = new Swiper(".mySwiper", {
     </div>
   </div>
 </section>
+    <!-- --------------------book dyn------------------------------------------- -->
+  <section class="books-wrapper">
 
+  <button class="arrow" onclick="scrollLeft()">&#8592;</button>
 
-<!-- --------------------BOOk Dynamics------------------------------------------- -->
-  <section class="books-section">
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
+  <div class="books" id="books">
 
-      <div class="swiper-slide book-card">
-        <img src="book1.jpg" />
-        <h3>Méthodes Numériques pour la Physique</h3>
-        <p>Publié en 2022 — Dunod</p>
-        <a href="#" class="btn">Consulter</a>
-      </div>
-
-      <div class="swiper-slide book-card">
-        <img src="book2.jpg" />
-        <h3>Applications de Python en Sciences</h3>
-        <p>Publié en 2021 — Springer</p>
-        <a href="#" class="btn">Consulter</a>
-      </div>
-
-      <div class="swiper-slide book-card">
-        <img src="book3.jpg" />
-        <h3>Intelligence Artificielle et Simulation</h3>
-        <p>Publié en 2020 — Elsevier</p>
-        <a href="#" class="btn">Consulter</a>
-      </div>
-
+    <div class="book">
+      <img src="book1.jpg">
+      <h3>Méthodes Numériques pour la Physique</h3>
+      <p>Publié en 2022 — Dunod</p>
     </div>
 
-    <!-- Flèches -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="book">
+      <img src="book2.jpg">
+      <h3>Applications de Python en Sciences</h3>
+      <p>Publié en 2021 — Springer</p>
+    </div>
+
+    <div class="book">
+      <img src="book3.jpg">
+      <h3>Intelligence Artificielle et Simulation</h3>
+      <p>Publié en 2020 — Elsevier</p>
+    </div>
 
   </div>
+
+  <button class="arrow" onclick="scrollRight()">&#8594;</button>
+
 </section>
 <!------------------BOOKS--------------------------->
   <!-- --------------------------------------------------------------- -->
