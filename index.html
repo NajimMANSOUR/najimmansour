@@ -99,27 +99,42 @@
     .hero h1 { font-size: 2em; }
     .hero h2 { font-size: 1em; }
   }
+/* Conteneur principal inchangé */
 .books-wrapper {
   display: flex;
   align-items: center;
   gap: 20px;
   margin: 60px 0;
+  overflow: hidden; /* important pour cacher le scroll manuel */
+  width: 100%;
 }
 
+/* Slider des livres */
 .books {
   display: flex;
   gap: 30px;
-  overflow-x: auto;
+  /* on enlève le scroll manuel visible */
+  overflow-x: hidden;
   scroll-behavior: smooth;
   width: 85%;
   padding: 30px;
+
+  /* Animation automatique */
+  animation: scrollBooks 20s linear infinite;
 }
 
+/* Scrollbar invisible */
 .books::-webkit-scrollbar {
   display: none;
 }
 
-/* Etat normal */
+/* Animation défilement automatique */
+@keyframes scrollBooks {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* défilement jusqu'à la moitié pour effet infini */
+}
+
+/* Livre normal */
 .book {
   min-width: 280px;
   background: white;
@@ -132,13 +147,13 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
 }
 
-/* 🔥 Quand on survole la zone books */
+/* Hover global (zone books) */
 .books:hover .book {
   transform: scale(0.9);
   opacity: 0.6;
 }
 
-/* 🔥 Livre actif (zoom automatique) */
+/* Livre actif au hover */
 .books .book:hover {
   transform: scale(1.15);
   opacity: 1;
@@ -168,6 +183,8 @@
   transform: scale(1.1);
   box-shadow: 0 10px 25px rgba(37,117,252,0.4);
 }
+
+/* Flèches (si jamais tu veux les laisser) */
 .arrow {
   position: relative;
   z-index: 100;
@@ -184,21 +201,6 @@
 }
 </style>
 </head>
-<script>
-function scrollLeft() {
-  document.getElementById("books").scrollBy({
-    left: -350,
-    behavior: "smooth"
-  });
-}
-
-function scrollRight() {
-  document.getElementById("books").scrollBy({
-    left: 350,
-    behavior: "smooth"
-  });
-}
-</script>
 </body>
 <!------------------------>
 <!---------------------------->
@@ -440,11 +442,8 @@ function scrollRight() {
       Ces travaux reflètent des approches interdisciplinaires et enrichissent la diffusion scientifique.
     </p>
 
-
-  <button class="arrow" onclick="scrollLeft()">&#10094;</button>
-
+<div class="books-wrapper">
   <div class="books" id="books">
-
     <div class="book">
       <img src="book1.jpg" alt="Livre 1">
       <h3>Méthodes Numériques pour la Physique</h3>
@@ -466,10 +465,30 @@ function scrollRight() {
       <a href="#" class="btn-consulter">Consulter</a>
     </div>
 
-  </div>
-  </div>
+    <!-- Duplique les livres pour le défilement infini -->
+    <div class="book">
+      <img src="book1.jpg" alt="Livre 1">
+      <h3>Méthodes Numériques pour la Physique</h3>
+      <p>Publié en 2022 — Dunod</p>
+      <a href="#" class="btn-consulter">Consulter</a>
+    </div>
 
-  <button class="arrow" onclick="scrollRight()">&#10095;</button>
+    <div class="book">
+      <img src="book2.jpg" alt="Livre 2">
+      <h3>Applications de Python en Sciences</h3>
+      <p>Publié en 2021 — Springer</p>
+      <a href="#" class="btn-consulter">Consulter</a>
+    </div>
+
+    <div class="book">
+      <img src="book3.jpg" alt="Livre 3">
+      <h3>Intelligence Artificielle et Simulation</h3>
+      <p>Publié en 2020 — Elsevier</p>
+      <a href="#" class="btn-consulter">Consulter</a>
+    </div>
+  </div>
+</div>
+  </div>
 
 </section>
 <!------------------BOOKS--------------------------->
